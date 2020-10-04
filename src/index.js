@@ -1,25 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
-import {Provider} from "react-redux";
-import configureStore, { history } from './configureStore'
-import {ConnectedRouter} from "connected-react-router";
 
-const store = configureStore()
+const app = <App />
 
-const router = (
-    <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <App history={history} />
-      </ConnectedRouter>
-    </Provider>
-    )
 
 ReactDOM
     .render(
-        router,
+        app,
         document.getElementById('root')
     );
 
