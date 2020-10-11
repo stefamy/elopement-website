@@ -1,0 +1,180 @@
+#our-story {
+  position: relative;
+  padding: 30px 20px;
+  min-height: 140vh;
+  z-index: 0;
+
+  #map-wrap {
+    min-height: 400vh;
+  }
+
+  .caption-roll {
+    position: relative;
+    z-index: 10;
+
+    .caption {
+      min-height: 100vh;
+
+      img {
+        width: 40px;
+      }
+    }
+  }
+
+}
+
+
+@keyframes fadeFillCA {
+  from {
+    fill: #8abbf1;
+  }
+  to {
+    fill: #fff;
+  }
+
+}
+
+@keyframes fadeFillMA {
+  from {
+    fill: #ffa4b8;
+  }
+  to {
+    fill: #fff;
+  }
+
+}
+
+
+
+#map-svg {
+
+  #map-g {
+    stroke: #ebebeb;
+  }
+
+  .cls-1, .cls-18 {
+    fill: #fff;
+  }
+
+  .cls-1 {
+    stroke: #ccc;
+  }
+
+  .cls-2 {
+    fill: #ffd15c;
+  }
+
+  .cls-3 {
+    fill: #f3705a;
+  }
+
+  .cls-4 {
+    fill: #344a5e;
+  }
+
+  .cls-5 {
+    fill: #415a6b;
+  }
+
+  .cls-6 {
+    fill: #e8eae9;
+  }
+
+  .cls-7 {
+    fill: #f7b64c;
+  }
+
+  .cls-8 {
+    fill: #3b5a71;
+  }
+
+  .cls-9 {
+    fill: #4bb9ec;
+  }
+
+  .cls-10 {
+    fill: #ccdbea;
+  }
+
+  .cls-11 {
+    fill: #ffdfba;
+  }
+
+  .cls-12 {
+    fill: #993317;
+  }
+
+  .cls-13 {
+    fill: #a57f44;
+  }
+
+  .cls-14 {
+    fill: #ffebd2;
+  }
+
+  .cls-15 {
+    fill: #eddf2f;
+  }
+
+  .cls-16 {
+    fill: #8c092b;
+  }
+
+  .cls-17 {
+    fill: #c1a78a;
+  }
+
+}
+
+
+  .caption1-visible #california,
+  .caption2-visible #california,
+  .caption3-visible #california {
+    fill: #8abbf1;
+  }
+
+  .caption2-visible #massachusetts,
+    .caption3-visible #massachusetts {
+    fill: #ffa4b8;
+  }
+    .caption3-visible {
+      #vermont {
+        fill: #a78fb1;
+      }
+
+      #massachusetts {
+        animation: fadeFillMA 1s 2s both;
+      }
+
+      #california {
+        animation: fadeFillCA 1s 2s both;
+      }
+
+
+      #caption3 {
+        position: relative;
+      }
+
+
+  }
+
+
+
+#dave,
+#amy,
+div:not(.caption3-visible) #plane-g,
+div:not(.caption3-visible) #ma-truck-g {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+#plane-g,
+#ma-truck-g {
+  position: absolute;
+}
+
+.caption3-visible #map-svg #plane-g,
+.caption3-visible #map-svg #ma-truck-g {
+    opacity: 1;
+}
+
